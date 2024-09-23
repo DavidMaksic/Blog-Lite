@@ -1,0 +1,58 @@
+@tailwind base;
+
+@layer base {
+   html {
+      font-family: 'Cormorant SC', 'Cormorant', serif;
+   }
+}
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+   .active {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+   }
+
+   .dropdown-active {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+   }
+
+   .hide {
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+   }
+
+   .brightness {
+      --tw-brightness: brightness(0.6);
+   }
+
+   .three-columns {
+      grid-template-columns: 0.1fr 2fr 1fr;
+   }
+
+   .three-columns-alt {
+      grid-template-columns: 0.1fr 2fr 0.1fr;
+   }
+
+   .two-columns {
+      grid-template-columns: 2fr 1fr;
+   }
+
+   .box-shadow {
+      box-shadow: 0 0.2rem 0.5rem #cbd5e1;
+   }
+
+   .box-shadow-lg {
+      box-shadow: 0 0.2rem 1.5rem #cbd5e1;
+   }
+
+   .outline-shadow:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px #a9a5cb9d;
+   }
+}

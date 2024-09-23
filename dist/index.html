@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html class="h-full scroll-smooth" lang="en ">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Blog Lite</title>
+      <link rel="stylesheet" href="/index.3b8cdc40.css">
+      <link rel="icon" href="/logo-sm.bb132471.png">
+
+      <!-- FONT -->
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+      <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cormorant+SC:wght@300;400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif+JP:wght@200..900&family=Prata&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
+
+      <!-- PARAGRAPH FONT  -->
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+
+      <!-- ICONS -->
+      <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer=""></script>
+      <script nomodule="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/dist/markdown-it.min.js"></script>
+   </head>
+
+   <body class="relative grid min-h-screen text-xl transition duration-300 body text-slate-700 dark:bg-slate-500 selection:bg-violet selection:text-white">
+     
+      <!--==  HEADER  ==-->
+
+      <header class="header">
+         <div class="grid grid-cols-3 justify-between items-center relative bg-gradient-to-r from-[#d2cfe4] from-0% via-[#edf1f5] via-[percentage:35%_65%] to-[#d2cfe4] to-100% dark:from-slate-700 dark:from-0% dark:via-slate-600 dark:via-[percentage:35%_65%] dark:to-slate-700 dark:to-100% md:three-columns sm:from-slate-50 sm:to-slate-50 sm:pt-5 sm:three-columns-alt">
+
+            <!-- BOOKMARKS -->
+
+            <div class="justify-self-center lg:justify-self-start lg:ml-10 md:ml-4">
+               <button class="dropdown-btn transition hover:brightness-125 hover:dark:brightness-125 z-20 flex gap-1 sm:fixed sm:bottom-[3rem] sm:right-[41vw] focus:outline-none mt-[0.25rem]">
+                  <a href="#">
+                     <ion-icon class="absolute text-4xl mt-1 transition-all duration-300 text-[#8593a6] dark:text-slate-400 bookmark-outline sm:text-[1.95rem] sm:text-[#748297] sm:dark:text-[#828fa1] sm:active" name="bookmark-outline" style="--ionicon-stroke-width: 26px"></ion-icon>
+                     <ion-icon class="absolute text-4xl mt-1 transition-all duration-300 text-[#8593a6] dark:text-slate-400  bookmark-filled hide sm:text-[1.95rem] sm:text-slate-400 sm:dark:text-[#748297]" name="bookmark"></ion-icon>
+                  </a>
+                  <span class="text-3xl lg:text-2xl text-slate-500 dark:text-[#a9b5c6] ml-[2.62rem] md:ml-10 md:mt-1 mb-1 mr-1 sm:hidden">Bookmarks</span>
+               </button>
+
+               <!-- Bookmark content -->
+
+               <div class="absolute z-20 flex flex-col invisible w-5/12 gap-4 pt-32 transition-all duration-300 opacity-0 pointer-events-none top-2 left-48 h-min bookmark-container 2xl:w-1/2 2xl:left-40 xl:left-28 xl:w-2/3 lg:w-3/4 lg:left-10 md:w-full md:h-screen md:top-0 md:left-0 sm:pt-14 md:z-40">
+                  <div class="bookmark-parent"></div>
+               </div>
+
+               <div class="fixed top-0 left-0 z-10 transition pointer-events-none backdrop-div md:h-screen md:w-full md:z-30"></div>
+
+            </div>
+
+            <!-- LOGO -->
+
+            <div class="flex justify-center py-6 justify-self-center xl:py-6 md:py-8 sm:pt-0 sm:pb-4">
+               <div class="flex items-center gap-5 md:gap-2 sm:gap-2">
+                  <img class="w-20 dark:contrast-50 brightness-110 dark:brightness-125 sm:w-12 sm:pt-0" src="/logo.726d37a8.png" alt="Logo">
+
+                  <span class="text-5xl sm:text-4xl font-black text-slate-800 bg-gradient-to-r from-[#475569] to-[#7a75aa] dark:from-white dark:to-[#bab7d5]" style="-webkit-text-fill-color: transparent; background-clip: text">My blog</span>
+               </div>
+            </div>
+            
+            <!-- Dark mode btn -->
+
+            <div class="justify-self-center flex items-center gap-10 text-2xl lg:justify-self-end lg:mr-10 md:mr-6 sm:fixed sm:bottom-[0.9rem] sm:right-[10vw] sm:mr-0 sm:p-0 sm:z-20">
+               <div id="dark-mode" class="flex gap-3 sm:gap-[0.76rem]">
+                  <ion-icon class="cursor-auto sun dark:text-slate-300 sm:text-[1.8rem] sm:text-[#748297] sm:absolute" name="sunny-outline"></ion-icon>
+
+                  <button class="relative w-12 h-6 transition rounded-full cursor-pointer bg-slate-500 hover:bg-slate-400 dark:bg-slate-400 dark:hover:bg-slate-300 sm:hidden outline-shadow">
+                     <span id="dot" class="absolute w-4 h-4 transition duration-300 rounded-full top-1 left-1 bg-slate-50 dark:bg-slate-600"></span>
+                  </button>
+
+                  <ion-icon class="cursor-auto moon dark:text-slate-300 sm:text-[1.8rem] sm:dark:text-[#8593a6]" name="moon-outline"></ion-icon>
+               </div>
+            </div>
+         </div>
+
+         <div class="h-[1px] bg-gradient-to-r from-white from-0% via-[#cbd5e1] via-[percentage:35%_65%] to-white to-100% dark:from-slate-700 dark:via-[#9895b7] dark:to-slate-700"></div>
+      </header>
+
+      <!--==  ARTICLES  ==-->
+
+      <main class="grid self-start main">
+         <div id="btn-parent" class="flex items-center justify-center gap-10 sm:mb-0">
+            <div class="flex items-center justify-center gap-10 mt-8 sm:fixed sm:bg-white sm:dark:bg-[#323b4a] sm:h-14 sm:w-full sm:z-10 sm:bottom-0 sm:opacity-[0.96] sm:border-t-[1px] sm:border-t-slate-200 sm:dark:border-t-slate-500 sm:box-shadow-lg sm:dark:shadow-none transition duration-200">
+            
+               <!-- HOME BTN (for phones) -->
+
+               <a class="home absolute h-7 left-[12.2vw] hide sm:opacity-100 sm:visible sm:pointer-events-auto sm:bottom-[0.9rem]" href="#">
+                  <ion-icon class=" text-[1.9rem] text-[#748297]" name="home-outline" style="--ionicon-stroke-width: 28px"></ion-icon>
+               </a>
+
+               <a href="#" class="return absolute hidden h-[76px] top-[24vh] left-[23.5vw] 2xl:top-[26vh] 2xl:left-[14.25vw] xl:left-[13vw] xl:top-[24vh] lg:left-[3.5vw] lg:top-[30vh] md:left-[2.1vw] md:top-[24vh] sm:top-[1vh] sm:left-[9.8vw] focus:outline-none">
+                  <ion-icon id="return-id" class="h-20 sm:h-10 cursor-pointer transition duration-200 text-[3.2rem] md:text-5xl sm:text-5xl text-slate-300 dark:text-slate-400 hover:text-slate-400 dark:hover:text-slate-300 hover:scale-90 sm:text-[#828fa1] sm:dark:text-[#828fa1]" name="chevron-back-circle-outline" style="--ionicon-stroke-width: 14px"></ion-icon>
+               </a>
+               
+               <!-- ADD POST BTN -->
+
+               <ion-icon id="add-btn" class="transition duration-200 cursor-pointer text-7xl text-slate-300 dark:text-slate-400 hover:text-slate-400 dark:hover:text-slate-300 hover:scale-90 lg:text-7xl md:text-8xl sm:text-[2.7rem] sm:z-30 sm:text-[#748297] sm:dark:text-[#828fa1] sm:absolute sm:left-[33vw]" name="add-outline" style="--ionicon-stroke-width: 24px"></ion-icon>
+            </div>
+         
+            <!-- SORTING -->
+             
+            <div class="sorting flex gap-3 mt-8 py-2 pl-4 pr-2 rounded-full bg-[#e8edf3] dark:bg-slate-600 sm:mt-0 sm:gap-2 sm:py-[0.5rem] sm:pr-[0.4rem] sm:rounded-t-none sm:w-4/6 sm:justify-center sm:dark:bg-slate-600 sm:bg-[#eef1f6] transition duration-300">
+               <label class="text-2xl text-[#768293] dark:text-slate-300 sm:text-xl sm:mt-[-1px]" for="tag">Sort by</label>
+               <select class="cursor-pointer pb-[0.1rem] pl-2 rounded-full text-2xl text-slate-500 dark:text-slate-200 bg-white dark:bg-slate-500 sm:text-xl sm:bg-white sm:shadow-sm sm:dark:bg-slate-500 transition duration-300 outline-shadow" id="sort-tag-menu">
+                  <option value="#All">All</option>
+                  <option value="#History">History</option>
+                  <option value="#Politics">Politics</option>
+                  <option value="#Religion">Religion</option>
+                  <option value="#Cooking">Cooking</option>
+                  <option value="#Health">Health</option>
+                  <option value="#IT">IT</option>
+                  <option value="#Sports">Sports</option>
+                  <option value="#Gaming">Gaming</option>
+                  <option value="#Movies">Movies</option>
+                  <option value="#Other">Other</option>
+               </select>
+            </div>
+         </div>
+         
+
+         <!-- ERROR MSG -->
+
+         <div id="message" class="transition-all duration-300 mx-auto rounded-xl w-2/5 2xl:w-3/5 lg:w-4/5 md:w-5/6 py-20 px-8 mt-24 sm:mt-14 sm:py-10 sm:mb-20 bg-slate-100 dark:bg-[#8593a6] text-center">
+            <span class="text-3xl text-slate-500 dark:text-slate-700">There are no articles here, why not write one?</span>
+            <img class="w-16 mx-auto mt-4 opacity-50" src="/signature.3ad47891.png" alt="Fountain Pen Icon">
+         </div>
+
+         <!-- MODAL -->
+
+         <section id="modal" class="absolute top-0 left-0 z-40 flex justify-center invisible w-full h-full pt-6 opacity-0 pointer-events-none 2xl:pt-8 xl:pt-20 lg:pt-4 md:pt-20 sm:pt-0 backdrop-blur-xl bg-[#6d768560] dark:bg-[#d4dae360] sm:fixed" style="transition: all .4s">
+            <form id="modal-content" class="relative flex flex-col w-1/2 gap-4 p-8 pb-10 sm:gap-4 2xl:w-2/3 2xl:p-6 xl:w-3/4 xl:p-10 lg:p-6 md:w-5/6 md:py-10 sm:px-4 sm:py-8 sm:pb-8 h-min sm:h-screen bg-slate-100 dark:bg-slate-600 sm:w-full">
+
+               <span id="exit-modal-btn" class="absolute h-20 text-5xl transition opacity-75 cursor-pointer top-4 right-5 text-slate-400 hover:text-slate-500 hover:dark:text-slate-200 2xl:top-2 2xl:right-3 sm:text-4xl sm:top-2 sm:right-2"><ion-icon name="close-outline"></ion-icon></span>
+
+               <!-- Heading -->
+
+               <div class="flex flex-col gap-[0.35rem] sm:gap-[0.2rem] pb-2">
+                  <h2 class="text-5xl 2xl:text-6xl lg:text-5xl sm:text-3xl  font-bold text-center dark:text-slate-100 bg-gradient-to-r from-slate-500 to-[#7a75aa] dark:from-white dark:to-[#bdbad5]" style="-webkit-text-fill-color: transparent; background-clip: text">
+                     Create an article
+                  </h2>
+
+                  <div class="w-2/3 md:w-3/4 sm:w-5/6 h-[2px] sm:h-[1.1px] mx-auto bg-gradient-to-r from-slate-100 via-violet to-slate-100 dark:from-slate-600 dark:via-violet dark:to-slate-600"></div>
+               </div>
+
+               <!-- Input fields -->
+
+               <div class="flex flex-col gap-8 mb-2 text-xl font-medium text-slate-400 xl:gap-6 md:gap-8 sm:text-base sm:gap-4 sm:mb-[-1px] pt-8 2xl:pt-0 xl:pt-4 sm:pt-0">
+                  <div class="flex flex-col gap-2 sm:gap-[0.1rem]">
+                     <span>title</span>
+                     <input id="title" class="text-[1.6rem] sm:text-xl text-slate-500 bg-slate-100 dark:bg-slate-600 dark:text-slate-300 input-element outline-shadow focus:rounded-md" type="text" name="title" value="History of Maneuver in Warfare" style="font-family: Cormorant Garamond, serif" required="">
+
+                     <div class="w-full mt-[-5px] h-[1px] sm:h-[0.5px] sm:mt-[-0.8px] bg-slate-300 dark:bg-slate-500"></div>
+                  </div>
+
+                  <div class="flex flex-col gap-2 sm:gap-[0.1rem]">
+                     <span>description</span>
+                     <input id="description" class="text-[1.6rem] sm:text-xl text-slate-500 bg-slate-100 dark:bg-slate-600 dark:text-slate-300 input-element outline-shadow focus:rounded-md" type="text" name="description" value="Maneuver Tactics, Part 1" style="font-family: Cormorant Garamond, serif" required="">
+
+                     <div class="w-full mt-[-5px] h-[1px] sm:h-[0.5px] sm:mt-[-0.8px] bg-slate-300 dark:bg-slate-500"></div>
+                  </div>
+
+                  <div class="grid items-center gap-20 two-columns sm:grid-cols-2 sm:gap-4">                   
+                     <div class="flex flex-col gap-2 sm:gap-[0.1rem]">
+                        <span>image (insert URL)</span>
+                        <input id="image" class="text-[1.6rem] sm:text-xl text-slate-500 bg-slate-100 dark:bg-slate-600 dark:text-slate-300 input-element outline-shadow focus:rounded-md" name="imageURL" style="font-family: Cormorant Garamond, serif" value="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Ff78f0e5c-c506-4d13-9da7-da2e65b0386c_1920x946.jpeg" required="">
+
+                        <div class="w-full mt-[-5px] h-[0.5px] sm:h-[0.5px] sm:mt-[-0.8px] bg-slate-300 dark:bg-slate-500"></div>
+                     </div>
+
+                     <!-- SORTING -->
+             
+                     <div class="flex flex-col gap-1 py-2 pl-4 pr-3 rounded-full bg-slate-100 dark:bg-slate-600">
+                        <label class="text-xl text-slate-400 dark:text-slate-400 sm:text-base" for="tag">category</label>
+                        <select class="cursor-pointer pb-[0.2rem] pl-3 rounded-full rounded-tl-none text-2xl text-slate-500 dark:text-slate-300 bg-[#dbe2ea] dark:bg-slate-500 w-3/4 sm:w-full sm:text-xl outline-shadow" id="tag">
+                           <option value="#History">history</option>
+                           <option value="#Politics">politics</option>
+                           <option value="#Religion">religion</option>
+                           <option value="#Cooking">cooking</option>
+                           <option value="#Health">health</option>
+                           <option value="#IT">it</option>
+                           <option value="#Sports">sports</option>
+                           <option value="#Gaming">gaming</option>
+                           <option value="#Movies">movies</option>
+                           <option value="#Other">other</option>
+                        </select>
+                     </div>
+                  </div>
+
+                  <div class="flex flex-col gap-2 sm:gap-[0.4rem]">
+                     <div class="relative flex gap-3">
+                        <span>content</span>
+                        <div class="info-icon absolute left-[5.2rem] top-[0.2rem] sm:left-[4.2rem] sm:top-[0rem] h-6 mb-[-10px] pl-[0.52rem] lg:pl-[0.56rem] rounded-full cursor-pointer w-6 bg-[#dbe2ea] dark:bg-[#404d5f]">
+                           <span class="absolute bottom-[0.001rem]" style="font-family: serif; font-style: italic">i</span>
+                        </div>
+
+                        <div class="md-info w-[26rem] absolute px-4 py-2 rounded-3xl left-[7.5rem] sm:w-[25rem] sm:left-[-10px] sm:top-[1.8rem] text-slate-500 dark:text-slate-300 bg-white dark:bg-slate-500 shadow-xl transition-all duration-200 sm:pb-4 sm:pt-3 hide">
+                           <ul class="pl-6 list-disc">
+                              <div class="flex flex-col gap-[0.08rem] items-center pr-6">
+                                 <span class="text-[1.25rem]">Markdown conventions</span>
+                                 <div class="w-full md:w-3/4 sm:w-5/6 h-[1px] sm:h-[1.1px] mx-auto bg-gradient-to-r from-white via-violet to-white dark:from-slate-500 dark:via-violet dark:to-slate-500 mb-2"></div>
+                              </div>
+
+                              <li>
+                                 #, ##, ### &nbsp; &nbsp;
+                                 <span class="text-[#9facbf]">-h1, h2, h3</span>
+                              </li>
+
+                              <li>
+                                 ___ , ---, *** &nbsp; &nbsp;
+                                 <span class="text-[#9facbf]">-Horizontal Rules</span>
+                              </li>
+
+                              <li>
+                                 >, >>, >>> &nbsp; &nbsp;
+                                 <span class="text-[#9facbf]">-Blockquotes</span>
+                              </li>
+
+                              <li>
+                                 1., 2., 3. &nbsp; &nbsp;
+                                 <span class="text-[#9facbf]">-Ordered list</span>
+                              </li>
+
+                              <li>
+                                 +, -, * &nbsp; &nbsp;
+                                 <span class="text-[#9facbf]">-Unordered list</span>
+                              </li>
+                              
+                              <li>
+                                 ![Image name](Insert URL) &nbsp;
+                                 <span class="text-[#9facbf]">-Add image</span>
+                              </li>
+                              
+                              <li>
+                                 *<em>italic</em>*, <em>_italic_</em>
+                              </li>
+
+                              <li>
+                                 **<strong>bold</strong>**, __<strong>bold</strong>__
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <textarea id="content" class="h-48 text-[1.6rem] sm:text-xl leading-8 text-slate-500 bg-slate-100 dark:text-slate-300 dark:bg-slate-600 sm:h-[25.2vh] input-element outline-shadow focus:rounded-md" name="content" style="font-family: Cormorant Garamond, serif" required="">We will examine what may be best termed as *the absolute fundamentals* of maneuver warfare - the concentration of fighting power, penetration into the enemy rear, and the envelopment of some or all of the enemy force. A *single envelopment* scheme of this sort, whether achieved through an asymmetrical deployment like the Thebans at Leuctra or a flanking movement like Rommel at Gazala, represents a sort of basic, stock model maneuver scheme - a potent, but relatively textbook design.                  
+
+In this entry, we will expand the scope of our study to look at maneuver on a larger scale, and in so doing demonstrate a countervailing principle to the schwerpunkt that we introduced last time. Schwerpunkt denotes the concentration of massed fighting power to allow maximum effort to be exerted at a decisive point. This is a powerful **battlefield tool**, but it is not without risks and downside - the accumulation of a concentrated mass, if unveiled by the enemy’s intelligence, will reveal the attacking intention and alert the enemy to vulnerabilities in other positions.
+
+# The Apogee of Genghis Khan
+
+Everybody knows of Genghis Khan. His name continues to carry some of the strongest cachet and instant recognition of any historical figure - though the name itself is something of a point of debate. Probably, it should be spelled and pronounced something closer to *“Chinggiz Khan”* - a title that meant something like *“universal ruler”*, which is thought to derive from the Turkic word *“Tengiz”* which means *“sea”* - implying that he ruled from sea to sea. But in any case, whether he is Tengiz, Chinggiz, or Genghis Khan, everybody knows him as the ruler of that cinematic Mongol horde that swept across Eurasia, conquering the largest contiguous land empire that the world has ever seen.
+
+Let us begin with a brief comment on the actual scope of Genghis’s achievements: - Before he could conquer the world, he had to conquer **Mongolia** - a feat that was much harder than it sounds. 
+- The Mongol world was one of *tribal pastoral nomads* - clans eternally wandering the steppe, herding their goats, sheep, camels, cattle, and horses from pasture to stream in seasonal patterns. This was an intrinsically harsh existence which kept the nomads in a permanent state of vigilance - disaster was only one step away. 
+- This promoted a deeply myopic *political system* - that is, focused on the immediate term and immediate needs, with khans constantly under pressure to deliver results and rewards in a steppe society that was constantly in a state of low intensity inter-tribal and inter-clan war.
+
+## Defeat of the Khwarizmian Empire
+
+Genghis had no military intentions in the Khwarazmian realm. He was hard at work eating the great elephant that was China, but he did view the Persian realm as a potentially lucrative trading partner, and dispatched a caravan with envoys to trade in the Khwarazmian markets. Unfortunately, the Shah’s governor in Otrar accused the Mongols of being spies, looted the caravan, and killed many of Genghis’s men. When Genghis sent three ambassadors to the Shah to demand restitution, the Shah had one of them beheaded and sent the others back to Genghis with their heads shaved.
+
+![Image](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fbac08693-6aaa-4b97-a3b9-643caee93534_811x871.png)
+
+Too see more about this war, check out [this Youtube documentary](https://www.youtube.com/watch?v=92-440OR2ik).
+
+---
+## The operational brilliance of Genghis’s campaign
+
+The theater was more 250,000 square miles. From Bukhara to Genghis’s staging area north of Lake Balkhash is nearly 800 miles. Across this vast distance, using nothing more sophisticated than signal flags and couriers, the Mongols coordinated four large military bodies, completely paralyzing the Shah’s armies with their range, mobility, and precision, before converging to deal the killing blow to at the capital.
+
+> The technology of the Mongol armies - a recurve bow and the hardy Mongolian horse - are now artifacts of history, but the brilliant display of dispersion, operational ambiguity, and maneuver are timeless, and it is fair to question if they have ever been surpassed. What Genghis demonstrated with this masterful campaign, eternally, is the power of dispersed maneuver to intellectually paralyze the enemy.
+
+In the space of less than six months, Genghis completely destroyed an enormous and stable empire with armies that greatly outnumbered his own. All that would remain after the fall of Samarkand was a manhunt to chase down the fleeing Shah, and a leisurely stroll through the remainder of his shattered realm, sacking cities one after another. The military back of the Empire was shattered.</textarea>
+                     <div class="w-full mt-[-5px] h-[1px] sm:h-[0.5px] sm:mt-[-0.8px] bg-slate-300 dark:bg-slate-500"></div>
+                  </div>
+               </div>
+
+               <!-- Buttons -->
+
+               <div class="flex items-center justify-center gap-4 my-3 text-3xl lg:mt-0 md:mt-4 sm:my-2">
+                  <div class="rounded-full text-slate-500 bg-gradient-to-r from-slate-400 to-violet">
+                     <button class="px-10 py-4 pb-[23px] box-shadow dark:shadow-none text-5xl xl:text-4xl xl:px-8 xl:py-2 xl:pb-3 md:px-10 md:py-4 md:pb-[23px] sm:text-4xl rounded-full text-white bg-gradient-to-r from-slate-400 to-violet hover:from-white hover:to-white hover:text-slate-600 sm:px-8 sm:py-3 sm:pb-[17px] outline-shadow">
+                        Publish
+                     </button>
+                  </div>
+               </div>
+            
+         </form></section>
+      </main>
+
+      <!--==  FOOTER  ==-->
+
+      <footer class="self-end footer">
+         <div class="footer-div mt-48 text-center bg-gradient-to-r from-[#d2cfe4] from-0% via-[#edf1f5] via-[percentage:35%_65%] to-[#d2cfe4] to-100% dark:from-slate-700 dark:from-0% dark:via-slate-600 dark:via-[percentage:35%_65%] dark:to-slate-700 dark:to-100% dark:text-slate-300 sm:from-[#e8edf3] sm:to-slate-50 sm:dark:from-slate-700 sm:dark:to-slate-600 sm:mt-12 sm:pb-[3.5rem]">
+            <!-- Logo -->
+
+            <div class="flex items-center justify-center gap-3 py-10 pt-14">
+               <img class="w-14 dark:contrast-50 brightness-110 dark:brightness-125 " src="/logo.726d37a8.png" alt="Logo">
+               <span class="text-4xl font-black text-slate-600 bg-gradient-to-r from-[#475569] to-[#7a75aa] dark:from-white dark:to-[#bdbad5]" style="-webkit-text-fill-color: transparent; background-clip: text">My blog</span>
+            </div>
+
+
+            <div class="w-2/5 md:w-2/3 sm:w-11/12 h-[1px] mx-auto bg-gradient-to-r from-slate-200 via-violet to-slate-200 dark:from-slate-600 dark:via-violet dark:to-slate-600 sm:dark:from-[#344256] sm:dark:via-violet sm:dark:to-slate-600 sm:from-[#E9EEF3] sm:via-violet sm:to-[#F7F9FC]"></div>
+
+            <div class="pt-12 pb-10 sm:text-base sm:pt-12 sm:pb-12 sm:text-slate-500 sm:dark:text-slate-300">
+               <span>Copyright ©2024. All rights reserved. </span>
+               <br>
+               <span>Project for portfolio. </span>
+               <p>
+                  Icons and logo are made by
+                  <span class="text-slate-600 dark:text-slate-300 sm:text-slate-500">Flaticon</span>
+                  and
+                  <a class="text-slate-600 dark:text-slate-300 transition duration-300 border-b-[1px] border-b-slate-400 hover:text-slate-400 dark:hover:text-slate-200 hover:border-transparent sm:text-slate-500 outline-shadow focus:rounded-md " href="https://remixicon.com/" target="_blank">RemixIcon</a>
+               </p>
+            </div>
+         </div>
+      </footer>
+
+      <a href="#">
+         <ion-icon class="chevron fixed text-7xl bottom-12 p-4 right-14 transition-all duration-500 opacity-0 pointer-events-none invisible text-slate-300 dark:text-slate-600 hover:translate-y-[-1.5rem] md:hidden" name="chevron-up-outline"></ion-icon>
+      </a>
+
+      <script src="/index.e37f48ea.js" defer=""></script>
+   </body>
+</html>
