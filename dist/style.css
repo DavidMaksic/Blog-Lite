@@ -1433,6 +1433,10 @@ html {
   cursor: pointer;
 }
 
+.cursor-none {
+  cursor: none;
+}
+
 .select-none {
   -webkit-user-select: none;
      -moz-user-select: none;
