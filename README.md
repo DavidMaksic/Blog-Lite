@@ -4,7 +4,7 @@ My Blog is a vanilla JavaScript app which enables the user to create, edit and d
 
 <br>
 
-You can check out the [live demo here](https://davidmaksic.github.io/Blog-Lite/).
+You can check out [the live demo here](https://davidmaksic.github.io/Blog-Lite/).
 
 ![main image](https://davidmaksic.vercel.app/assets/blog-BzPyGbQA.png)
 
