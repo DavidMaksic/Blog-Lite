@@ -4,6 +4,8 @@ A simple blogging app with a bookmark feature. Built with vanilla JavaScript usi
 
 You can check out the [live demo here](https://davidmaksic.vercel.app/blog).
 
+<br>
+
 ![main image](https://davidmaksic.vercel.app/assets/blog-BzPyGbQA.png)
 
 <br>
