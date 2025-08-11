@@ -9,5 +9,32 @@ You can check out the [live demo here](https://davidmaksic.vercel.app/blog).
 <br>
 
 ## Initial screen
-
 If there are no articles yet, user will be greeted with this message. Articles can be filtered by category and saved to the bookmarks.
+
+![initial screen](https://davidmaksic.vercel.app/assets/blog-1-BqI6lMV-.png)
+
+<br>
+
+## Creating an article
+When plus button is clicked, modal window will show up. In this modal user can write an article, along with deciding on a category. This creator features Markdown, which can be seen on the picture bellow.
+
+![article creator](https://davidmaksic.vercel.app/assets/blog-2-B_2-ET5Q.png)
+
+<br>
+
+After publishing the article, modal will close and article will be displayed.
+
+![article](https://davidmaksic.vercel.app/assets/blog-3-BrjqNRiH.png)
+
+<br>
+
+If user is not happy with the result, article can be edited or deleted.
+
+![article options](https://davidmaksic.vercel.app/assets/blog-4-Ciyd8EYB.png)
+
+<br>
+
+## Bookmarked articles
+Articles can be saved to the bookmarks, which can be found on the top-left part of the page.
+
+![bookmarks](https://davidmaksic.vercel.app/assets/blog-5-DGn_7VWJ.png)
