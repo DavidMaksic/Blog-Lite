@@ -457,7 +457,7 @@ class ArticleView extends View {
 
                   <span class="tag-element absolute top-0 left-0 text-sm rounded-full rounded-t-none rounded-l-none bg-slate-300 dark:bg-slate-700 text-slate-600 dark:text-[#9facbf] px-2 py-[0.15rem] pb-[0.3rem] pr-[1rem] opacity-75 md:hide">${data.tag}</span>
                </div>
-               <img class="preview-img w-2/5 2xl:w-1/2 md:w-full" src="${data.imageURL}" alt="">
+               <img class="preview-img w-2/5 2xl:w-1/2 md:w-full" src="${data.imageURL}" alt="" />
                <span class="tag-elements hide md:active absolute sm:opacity-75 top-0 left-0 md:text-xl sm:text-base font-normal rounded-full rounded-t-none rounded-l-none dark:bg-slate-600 dark:text-slate-300 bg-slate-100 text-slate-500 py-1 px-3 pr-6 pb-[0.4rem] sm:py-[0.1rem] sm:px-[0.5rem] sm:pb-[0.2rem] sm:pr-4">${data.tag}</span>
             </div>
             <div class="preview-styling h-[1px] bg-gradient-to-r from-white via-[#c3c0db] to-white dark:from-slate-500 dark:via-[#9895b7] dark:to-slate-500 md:hidden"></div>
@@ -496,7 +496,7 @@ class ArticleView extends View {
                <span class="tag-element bg-[#d5dde7] dark:bg-slate-600 sm:dark:bg-slate-700 px-3 py-1 pb-[0.3rem] pr-[0.85rem] sm:py-[0.1rem] sm:pb-[0.13rem] sm:px-[0.6rem] rounded-full mt-[-14px] sm:mt-[-20px] font-medium text-slate-500 dark:text-slate-400 sm:text-base">${data.tag}</span>
             </div>
 
-            <img class="article-img mb-8 sm:mb-2" src="${data.imageURL}" alt="Article Image">
+            <img class="article-img mb-8 sm:mb-2" src="${data.imageURL}" alt="Article Image" />
 
             <p class="article-p text-2xl leading-[1.9rem] text-justify sm:leading-[1.65rem] text-slate-600 dark:text-slate-100 sm:text-xl sm:text-slate-700" style="font-family: 'Cormorant Garamond', serif;">${data.content}</p>
 
