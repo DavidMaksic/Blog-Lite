@@ -6,11 +6,6 @@ You can check out [the live demo here](https://davidmaksic.github.io/Blog-Lite/)
 
 <br>
 
-Installation:
-```
-npm i && npm start
-```
-
 ![main image](https://davidmaksic.vercel.app/blog.png)
 
 <br>
